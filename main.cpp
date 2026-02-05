@@ -1,9 +1,16 @@
+//Jwalia Raval
+//2/4/25
+//Bank account code
+
+
+
+
 #include <iostream>
 #include <vector>
 #include <string>
 #include <limits>
 #include <iomanip>
-
+// Bank Account class
 class BankAccount {
 private:
     std::string accountNumber;
@@ -11,6 +18,7 @@ private:
     double balance;
 
 public:
+//Balance with banka ccount name and holder. 
     BankAccount() : accountNumber(""), accountHolderName(""), balance(0.0) {}
 
     BankAccount(std::string accNum, std::string name, double initialBalance) {
@@ -45,12 +53,12 @@ public:
         }
     }
 };
-
+//Makes sure the input is write. 
 void clearInput() {
     std::cin.clear();
     std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 }
-
+// main
 int main() {
     std::vector<BankAccount> accounts;
     int choice;
@@ -105,3 +113,4 @@ int main() {
     }
     return 0;
 }
+//That's it. 
